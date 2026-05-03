@@ -1,0 +1,14 @@
+﻿/* Estilos personalizados */
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 25px;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    transition: width 0.5s ease-in-out;
+}

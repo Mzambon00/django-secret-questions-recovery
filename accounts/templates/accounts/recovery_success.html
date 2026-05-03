@@ -1,0 +1,24 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header bg-success text-white text-center">
+                    <h4 class="mb-0">✅ RECUPERAÇÃO CONCLUÍDA</h4>
+                </div>
+                <div class="card-body text-center">
+                    <div class="mb-4">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Senha alterada com sucesso!</h3>
+                    <p class="mt-3">Sua senha foi redefinida. Agora você pode fazer login com sua nova senha.</p>
+                    <a href="{% url 'login' %}" class="btn btn-primary mt-3">IR PARA LOGIN</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,85 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">📝 CADASTRO DE USUÁRIO</h4>
+                </div>
+                <div class="card-body">
+                    {% if form.errors %}
+                        <div class="alert alert-danger">
+                            <strong>Erros no formulário:</strong>
+                            {{ form.errors }}
+                        </div>
+                    {% endif %}
+                    
+                    <form method="post">
+                        {% csrf_token %}
+                        
+                        <h5 class="mb-3">Dados básicos</h5>
+                        <div class="mb-3">
+                            <label>👤 Usuário:</label>
+                            {{ form.username }}
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label>📧 Email:</label>
+                            {{ form.email }}
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label>🔒 Senha:</label>
+                            {{ form.password1 }}
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label>🔒 Confirmar Senha:</label>
+                            {{ form.password2 }}
+                        </div>
+                        
+                        <hr>
+                        <h5 class="mb-3">🔐 PERGUNTAS SECRETAS (Opcional)</h5>
+                        
+                        <div class="mb-3">
+                            <label>Pergunta 1:</label>
+                            {{ form.pergunta1 }}
+                        </div>
+                        <div class="mb-3">
+                            <label>Resposta 1:</label>
+                            {{ form.resposta1 }}
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label>Pergunta 2:</label>
+                            {{ form.pergunta2 }}
+                        </div>
+                        <div class="mb-3">
+                            <label>Resposta 2:</label>
+                            {{ form.resposta2 }}
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label>Pergunta 3:</label>
+                            {{ form.pergunta3 }}
+                        </div>
+                        <div class="mb-3">
+                            <label>Resposta 3:</label>
+                            {{ form.resposta3 }}
+                        </div>
+                        
+                        <div class="mb-3 form-check">
+                            {{ form.usar_fallback }}
+                            <label class="form-check-label">✓ Usar como fallback de recovery</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">CADASTRAR</button>
+                        <a href="{% url 'login' %}" class="btn btn-secondary">Cancelar</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
