@@ -1,5 +1,3 @@
-# Criar README.md ULTRA COMPLETO
-
 <div align="center">
 
 # 🔐 DJSQR - Django Secret Questions Recovery
